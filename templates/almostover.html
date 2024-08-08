@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Race Begins</title>
+<head>
+
+</head>
+<body background="media/artists/bg1.jpg" >
+<script>
+ var i =-1;
+ var x = setInterval(function() {
+
+    var sg={{ heyo }}[0][0];
+    var dg={{ heyo }}[0][1];
+    var tg={{ heyo }}[0][2];
+    i=i+1;
+     var distance = dg.length-i;
+
+
+  document.getElementById("sg").innerHTML =  sg[i];
+  document.getElementById("dg").innerHTML =  dg[i];
+  document.getElementById("tg").innerHTML =  tg[i];
+
+  if (distance <= 0) {
+    clearInterval(x);
+    document.getElementById("sg").innerHTML =  sg[sg.length-1];
+    document.getElementById("dg").innerHTML =  dg[sg.length-1];
+    document.getElementById("tg").innerHTML =  tg[sg.length-1];
+    document.getElementById("demo").innerHTML = "FINISHED";
+  }
+}, 1000);
+
+ var i1 =-1;
+ var x1 = setInterval(function() {
+
+
+    var st={{ heyo }}[1][0];
+    var dt={{ heyo }}[1][1];
+    var tt={{ heyo }}[1][2];
+
+    i1=i1+1;
+     var distance = dt.length-i1;
+
+
+
+  document.getElementById("st").innerHTML =  st[i1];
+  document.getElementById("dt").innerHTML =  dt[i1];
+  document.getElementById("tt").innerHTML =  tt[i1];
+
+
+  if (distance <= 0) {
+    clearInterval(x1);
+    document.getElementById("st").innerHTML =  st[dt.length-1];
+    document.getElementById("dt").innerHTML =  dt[dt.length-1];
+    document.getElementById("tt").innerHTML =  tt[dt.length-1];
+    document.getElementById("demo1").innerHTML = "FINISHED";
+  }
+}, 1000);
+
+ var i2 =-1;
+ var x2 = setInterval(function() {
+
+    var sn={{ heyo }}[2][0];
+    var dn={{ heyo }}[2][1];
+    var tn={{ heyo }}[2][2];
+
+    i2=i2+1;
+     var distance = dn.length-i2;
+
+
+  document.getElementById("sn").innerHTML =  sn[i2];
+  document.getElementById("dn").innerHTML =  dn[i2];
+  document.getElementById("tn").innerHTML =  tn[i2];
+
+
+
+  if (distance <= 0) {
+    clearInterval(x2);
+    document.getElementById("sn").innerHTML =  sn[dn.length-1];
+    document.getElementById("dn").innerHTML =  dn[dn.length-1];
+    document.getElementById("tn").innerHTML =  tn[dn.length-1];
+    document.getElementById("demo2").innerHTML = "FINISHED";
+  }
+}, 1000);
+
+
+ var i3 =-1;
+ var x3 = setInterval(function() {
+
+    var ss={{ heyo }}[3][0];
+    var ds={{ heyo }}[3][1];
+    var ts={{ heyo }}[3][2];
+    i3=i3+1;
+     var distance = ds.length-i3;
+
+
+
+  document.getElementById("ss").innerHTML =  ss[i3];
+  document.getElementById("ds").innerHTML =  ds[i3];
+  document.getElementById("ts").innerHTML =  ts[i3];
+
+  if (distance <= 0) {
+    clearInterval(x3);
+    document.getElementById("ss").innerHTML =  ss[ds.length-1];
+    document.getElementById("ds").innerHTML =  ds[ds.length-1];
+    document.getElementById("ts").innerHTML =  ts[ds.length-1];
+    document.getElementById("demo3").innerHTML = "FINISHED";
+  }
+}, 1000);
+</script>
+
+<style>
+    body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: media/artists/bg1.jpg;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+th {
+	text-align: left;
+}
+
+
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
+	td {
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(255,255,255,0.2);
+				z-index: -1;
+			}
+		}
+	}
+}
+</style>.
+    <div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th>Horse Name</th>
+				<th>Speed</th>
+				<th>Distance</th>
+				<th>Time</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Thunderbolt</td>
+				<td><p id="st" name="timer"></p>m/s</td>
+				<td><p id="dt" name="timer"></p>metres</td>
+				<td><p id="tt" name="timer"></p>seconds</td>
+			</tr>
+			<tr>
+				<td>Nightmare</td>
+				<td><p id="sn" name="timer"></p>m/s</td>
+				<td><p id="dn" name="timer"></p>metres</td>
+				<td><p id="tn" name="timer"></p>seconds</td>
+
+			</tr>
+			<tr>
+				<td>Gallopy</td>
+				<td><p id="sg" name="timer"></p>m/s</td>
+				<td><p id="dg" name="timer"></p>metres</td>
+				<td><p id="tg" name="timer"></p>seconds</td>
+
+			</tr>
+			<tr>
+				<td>Stallion</td>
+				<td><p id="ss" name="timer"></p>m/s</td>
+				<td><p id="ds" name="timer"></p>metres</td>
+				<td><p id="ts" name="timer"></p>seconds</td>
+
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+</body>
+
+</html>

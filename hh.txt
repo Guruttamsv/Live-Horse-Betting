@@ -1,0 +1,21 @@
+import time
+import random
+d=i=0
+def j(speed,distance):
+    distance=distance+(speed*2)
+    return distance
+def f(a,b,i=0):
+        speed=random.randint(a,b)
+        time.sleep(1)
+        a+=3
+        b+=3
+        return speed
+while(True):
+    i+=1
+    c=c+f(i+4,i+12)
+    d=d+j(c,d)
+    if(d>=1500):
+        d=d+1500
+        i=i+(i+2)
+        break
+

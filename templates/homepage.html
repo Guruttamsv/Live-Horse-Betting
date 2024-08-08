@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Horse Betting</title>
+</head>
+<body background="media/artists/bg1.jpg">
+
+<table bgcolor="#808080" border="10%" align="center">
+    <p style="color: white ; font-size: xx-large " align="center"> WELCOME TO CATASTROPHY </p>
+    <p id="demo" name="timer" style="color: white ; font-size: xx-large " align="center" ></p>
+    {{ starta }}
+
+<script>
+// Update the count down every 1 second
+ var time_in_minutes = 10;
+ var current_time = Date.parse(new Date());
+ var x = setInterval(function() {
+
+  // Get today's date and time
+    var now = new Date().getTime();
+  // Set the date we're counting down to
+
+    var countDownDate = new Date(current_time + time_in_minutes*60*1000);
+  // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+  // Time calculations for days, hours, minutes and seconds
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML =  hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    <tr>
+
+        <td><a href="race"><img src="media/horsey blah/SA/ONTO.jpg" width="660px" height="320px" title="TO THE RACE" ></a></td>
+
+
+    </tr>
+    <tr>
+        <td><a href="register"><img src="media/horsey blah/SA/Register.jpg" width="660px" height="320px" title="REGISTER HERE"></a>
+        <a href="admin"><img src="media/horsey blah/SA/admin.jpg" width="660px" height="320px" title="ADMIN" ></a></td>
+    </tr>
+</table>
+</body>
+</html>
